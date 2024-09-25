@@ -35,21 +35,21 @@ myQueue.empty(); // return false
 
 */
 
-class MyQueue {
-    private items: number[];
+class MyQueue<T> {
+    private items: T[];
     constructor() {
         this.items = [];
     }
 
-    push(x: number): void {
+    push(x: T): void {
         this.items.push(x)
     }
 
-    pop(): number{
+    pop(): T{
         return this.items.shift()!;
     }
 
-    peek(): number {
+    peek(): T {
         return this.items[0]
     }
 
@@ -66,3 +66,12 @@ class MyQueue {
  * var param_3 = obj.peek()
  * var param_4 = obj.empty()
  */
+
+const obj = new MyQueue<number>();
+obj.push(10);
+obj.push(20);
+obj.push(30);
+console.log(obj.peek());
+obj.pop()
+console.log(obj.empty());
+console.log(obj);
