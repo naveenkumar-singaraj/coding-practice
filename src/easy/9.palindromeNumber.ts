@@ -24,7 +24,7 @@ Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
 
 */
 
-function isPalindrome(x: number): boolean {
+function palindrome(x: number): boolean {
     // Hint: no need to worry about -ve and preceding 0
    return x.toString().split('').reverse().join('') === x.toString();
 };

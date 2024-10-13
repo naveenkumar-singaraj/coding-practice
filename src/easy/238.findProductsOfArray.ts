@@ -56,7 +56,7 @@ function findProductOfArray(input: number[]) {
 
     // Suffix calculation & update results
     for(let i=input.length-1; i>=0; i--) {
-        result[i] = suffix*result[i];
+        result[i] = suffix*result[i]; // instead of assigning suffix, we can multiply with prefix result to avoid one more loop
         suffix = suffix*input[i];
     }
 

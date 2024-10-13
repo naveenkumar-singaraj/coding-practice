@@ -22,7 +22,7 @@ Explanation: n = 9 since there are 9 numbers, so all numbers are in the range [0
 
 */
 
-function missingNumber(nums: number[]): number {
+function missingNumberFromArray(nums: number[]): number {
     // Brute force: iterate through 0 the n and check if it is there in array
     // const n = nums.length;
     
@@ -41,3 +41,5 @@ function missingNumber(nums: number[]): number {
     const actualSum = nums.reduce((acc, num) => acc + num, 0);
     return expectedSum - actualSum;  
 };
+
+console.log(missingNumberFromArray([9,6,4,2,3,5,7,0,1]))

@@ -32,7 +32,7 @@ Note that because m = 0, there are no elements in nums1. The 0 is only there to 
 /**
  Do not return anything, modify nums1 in-place instead.
  */
-function merge(nums1: number[], m: number, nums2: number[], n: number): void {
+function mergeArrays(nums1: number[], m: number, nums2: number[], n: number): void {
     // Hint: Start from last to avoid shifting elements
     let i = m - 1; // Last number in nums1 excluding 0
     let j = n - 1; // Last number in nums2 excluding 0
@@ -59,4 +59,4 @@ function merge(nums1: number[], m: number, nums2: number[], n: number): void {
     }
 };
 
-merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)
+mergeArrays([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3)

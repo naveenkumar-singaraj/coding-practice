@@ -10,7 +10,7 @@ function longestSubString(input: string): string {
 
     // 2 pointers for sliding window
     let left = 0;
-    let right = 1;
+    let right = 0;
     let maxLength = 0;
     let longestString = ''
     // Use set to store unique characters

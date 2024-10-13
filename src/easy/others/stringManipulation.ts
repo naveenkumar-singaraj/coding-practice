@@ -21,6 +21,14 @@ function reverseEachWord(input: string): string {
 
 
 function findDuplicateChars(input: string): string[] {
+
+    const dupChars = new Set();
+    const seen = new Set();
+    for (const char of input) {
+        if(seen.has(char)) {
+            dupChars.add(char);
+        }
+    }
     const duplicateChars: string[] = [];
     // map, character as key and number of occurense as value
     const charCount = new Map<string, number>();

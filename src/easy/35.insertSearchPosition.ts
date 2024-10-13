@@ -35,6 +35,12 @@ function searchInsert(nums: number[], target: number): number {
             end = mid + 1
         }
     }
+    /*
+    Below line gets executed when start > end
+    If the target is smaller than all elements, start will end up at 0, indicating the target should be inserted at the beginning.
+    If the target is larger than all elements, start will end up at nums.length, indicating it should be inserted at the end.
+    If the target should be inserted somewhere in the middle, start will point to the first element that is greater than the target. This is the correct insertion index.
+    */
     return start;
 };
 
